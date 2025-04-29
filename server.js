@@ -9,7 +9,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chat-task-2kh2.vercel.app/",
     methods: ["GET", "POST"]
   }
 });
