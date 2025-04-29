@@ -9,8 +9,9 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://chat-task-2kh2.vercel.app/",
-    methods: ["GET", "POST"]
+    origin: ["https://chat-task-2kh2.vercel.app", "http://localhost:5173"],
+    methods: ["GET", "POST"],
+    credentials: true,
   }
 });
 const roomData = {};
